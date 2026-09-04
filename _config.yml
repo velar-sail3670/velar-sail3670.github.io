@@ -1,22 +1,24 @@
 theme: jekyll-theme-chirpy
 
-lang: en
+lang: zh-CN
 
-timezone:
+timezone: Asia/Shanghai
 
-title: Chirpy
-tagline: A text-focused Jekyll theme
+title: Luka Chia
+
+tagline: Cloud · Infrastructure · Architecture · Security
+
 description: >-
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Technical notes and engineering experience in Cloud,
+  Infrastructure, Networking, Security and Architecture.
 
-url: ""
+url: "https://luka-chia.github.io"
 
 github:
-  username: github_username
+  username: luka-chia
 
 social:
-  name: Luka
-  email: luka.chia
+  name: Luka Chia
 
 baseurl: ""
 
