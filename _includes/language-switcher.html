@@ -1,0 +1,26 @@
+{% assign translations = site.posts | where: 'translation_key', page.translation_key %}
+
+{% if page.translation_key and translations.size > 1 %}
+  <nav class="d-flex align-items-center gap-2 mb-4" aria-label="Language switcher">
+    <span class="text-muted me-1">语言 / Language:</span>
+
+    {% for translation in translations reversed %}
+      {% case translation.lang %}
+        {% when 'zh-CN' %}
+          {% assign language_label = '中文' %}
+        {% when 'en' %}
+          {% assign language_label = 'English' %}
+        {% else %}
+          {% assign language_label = translation.lang %}
+      {% endcase %}
+
+      {% if translation.url == page.url %}
+        <span class="btn btn-sm btn-primary" aria-current="page">{{ language_label }}</span>
+      {% else %}
+        <a class="btn btn-sm btn-outline-primary" href="{{ translation.url | relative_url }}" hreflang="{{ translation.lang }}">
+          {{ language_label }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+{% endif %}
